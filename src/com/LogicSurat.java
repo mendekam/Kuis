@@ -5,35 +5,65 @@ import com.lomba.MenulisSurat;
 public class LogicSurat implements MenulisSurat {
     double struktur, isi, kreativitasSurat, penerapanKaidah;
     double hasil;
+    String keterangan = "Tidak Lulus";
 
-    public LogicSurat(double struktur, double isi, double kreativitas, double penerapanKaidah) {
+    public LogicSurat(double struktur, double isi, double kreativitasSurat, double penerapanKaidah) {
         this.struktur = struktur;
         this.isi = isi;
         this.kreativitasSurat = kreativitasSurat;
         this.penerapanKaidah = penerapanKaidah;
     }
 
+    public void setStruktur(double struktur) {
+        this.struktur = struktur;
+    }
+
+    public void setIsi(double isi) {
+        this.isi = isi;
+    }
+
+    public void setKreativitasSurat(double kreativitasSurat) {
+        this.kreativitasSurat = kreativitasSurat;
+    }
+
+    public void setPenerapanKaidah(double penerapanKaidah) {
+        this.penerapanKaidah = penerapanKaidah;
+    }
+
     @Override
     public double struktur() {
-        return (struktur = struktur * 0.10);
+        struktur = struktur * 0.10;
+        return struktur;
     }
 
     @Override
     public double isi() {
-        return (isi = isi * 0.40);
+        isi = isi * 0.40;
+        return isi;
     }
 
     @Override
     public double kreativitasSurat() {
-        return (kreativitasSurat = kreativitasSurat * 0.30);
+        kreativitasSurat = kreativitasSurat * 0.30;
+        return kreativitasSurat;
     }
 
     @Override
     public double penerapanKaidah() {
-        return (penerapanKaidah = penerapanKaidah * 0.20);
+        penerapanKaidah = penerapanKaidah * 0.20;
+        return penerapanKaidah;
     }
 
     public double hasil(){
-        return (hasil = struktur + isi + kreativitasSurat + penerapanKaidah);
+        hasil = struktur() + isi() + kreativitasSurat() + penerapanKaidah();
+        return hasil;
     }
+
+    public String keterangan(){
+        if (hasil >=85){
+            keterangan = "Lulus";
+        }
+        return keterangan;
+    }
+
 }
