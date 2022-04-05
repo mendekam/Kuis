@@ -15,25 +15,25 @@ public class LogicSurat implements MenulisSurat {
 
     @Override
     public double struktur() {
-        return struktur;
+        return (struktur = struktur * 0.10);
     }
 
     @Override
     public double isi() {
-        return isi;
+        return (isi = isi * 0.40);
     }
 
     @Override
-    public double kreativitas() {
-        return kreativitasSurat;
+    public double kreativitasSurat() {
+        return (kreativitasSurat = kreativitasSurat * 0.30);
     }
 
     @Override
     public double penerapanKaidah() {
-        return penerapanKaidah;
+        return (penerapanKaidah = penerapanKaidah * 0.20);
     }
 
     public double hasil(){
-        return (hasil = struktur, isi, kreativitasSurat, penerapanKaidah);
+        return (hasil = struktur + isi + kreativitasSurat + penerapanKaidah);
     }
 }

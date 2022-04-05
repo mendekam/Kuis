@@ -15,22 +15,22 @@ public class LogicAnimasi implements Animasi {
 
     @Override
     public double alurCerita() {
-        return alur;
+        return (alur = alur * 0.15);
     }
 
     @Override
     public double konten() {
-        return konten;
+        return (konten = konten * 0.35);
     }
 
     @Override
     public double kreativitas() {
-        return kreativitasAnimasi;
+        return (kreativitasAnimasi = kreativitasAnimasi * 0.35);
     }
 
     @Override
     public double sinematografi() {
-        return sinematografi;
+        return (sinematografi = sinematografi * 0.15);
     }
 
     public double hasil(){

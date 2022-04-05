@@ -4,6 +4,6 @@ public interface MenulisSurat {
 
     double struktur();
     double isi();
-    double kreativitas();
+    double kreativitasSurat();
     double penerapanKaidah();
 }
